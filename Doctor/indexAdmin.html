@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="icon" href="../icons/favicon.ico">
+    <title>AdminPanel</title>
+    
+</head>
+<body>
+    <header>
+        <img class="logo" src="../icons/doctor-logo-49385.png" alt="logo">
+        <h1>Arogya Polyclinic</h1>
+        <a class="login-button" href="admin_login.aspx">login</a>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+        <ul>
+           <li><a href="indexAdmin.html">Home</a></li>
+           <li>
+              <a href="change_password.aspx">Change Password</a>
+           </li>
+           <li><a href="add_schedule.aspx">Schedule Master</a></li>
+           <li><a href="test_category.aspx">Test Details Master</a></li>
+           <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">View Report</a>
+               <div class="dropdown-content">
+                  <a href="viewTest_report.aspx">Test Report</a>
+                  <a href="view_testBooking.aspx">Test Booking</a>
+                  <a href="view_appointmentbooking.aspx">Appointment Booking</a>
+               </div>
+           </li>
+        </ul>
+    </header>
+    <img class="banner-image" src="../images/pngtree-medical-background.jpg" alt="doctors">
+    <main style="background-color: beige; padding: 20px 10px; text-align: center; ">
+        <p style="font-size:large;">Welcome to Arogya Polyclinic</p>
+    </main>
+    <footer>
+        <div class="bottom-container">
+            <p>follow us on social media:</p>
+            <a href="https://twitter.com/joydipp51017297">Twitter</a>
+            <a href="https://www.facebook.com/joydip.paul.501151">facebook</a>
+            <a href="https://www.linkedin.com/in/joydip-paul-04a17322a/">LinkedIn</a>
+            <p>©Copyright 2022 Developed by Joydip Paul.</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

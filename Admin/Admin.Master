@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="ClinicManagementSystem.Admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style1.css">
+  <link rel="icon" href="../icons/favicon.ico">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <header class="top-container">
+  <img class="logo" src="../icons/doctor-logo-49385.png" alt="logo">
+  <h1>Arogya Ployclinic</h1>
+  <a class="login-button" href="admin_login.aspx">Admin login</a>
+  <ul>
+    <li><a href="system_login.aspx">Home</a></li>
+    <li><a href="Register_admin.aspx">Register</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Account</a>
+      <div class="dropdown-content">
+        <a href="createAdmin.aspx">create</a>
+        <a href="delete_Account.aspx">Delete</a>
+      </div>
+    </li>
+    <li><a href="add_city.aspx">Add city</a></li>
+    <li><a href="Add_department.aspx">Add Department</a></li>
+  </ul>
+</header>
+<img class="banner-image" src="../images/pngtree-medical-background.jpg" alt="doctors">
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+  <div class="bottom-container">
+    <p>follow us on social media:</p>
+    <a  href="https://twitter.com/joydipp51017297">Twitter</a>
+    <a  href="https://www.facebook.com/joydip.paul.501151">facebook</a>
+    <a  href="https://www.linkedin.com/in/joydip-paul-04a17322a/">LinkedIn</a>
+    <p>©Copyright 2022 by Joydip Paul.</p>
+  </div>
+   
+</body>
+</html>

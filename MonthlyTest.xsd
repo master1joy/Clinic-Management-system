@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MonthlyTest" targetNamespace="http://tempuri.org/MonthlyTest.xsd" xmlns:mstns="http://tempuri.org/MonthlyTest.xsd" xmlns="http://tempuri.org/MonthlyTest.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ClinicManagementConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ClinicManagementConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ClinicManagementConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="test_bookingTableAdapter" GeneratorDataComponentClassName="test_bookingTableAdapter" Name="test_booking" UserDataComponentName="test_bookingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ClinicManagementConnectionString (Web.config)" DbObjectName="ClinicManagement.dbo.test_booking" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT book_id, patient_id, test_id, sch_time, paid, Due FROM dbo.test_booking</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="book_id" DataSetColumn="book_id" />
+              <Mapping SourceColumn="patient_id" DataSetColumn="patient_id" />
+              <Mapping SourceColumn="test_id" DataSetColumn="test_id" />
+              <Mapping SourceColumn="sch_time" DataSetColumn="sch_time" />
+              <Mapping SourceColumn="paid" DataSetColumn="paid" />
+              <Mapping SourceColumn="Due" DataSetColumn="Due" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MonthlyTest" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="MonthlyTest" msprop:Generator_DataSetName="MonthlyTest">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="test_booking" msprop:Generator_RowEvHandlerName="test_bookingRowChangeEventHandler" msprop:Generator_RowDeletedName="test_bookingRowDeleted" msprop:Generator_RowDeletingName="test_bookingRowDeleting" msprop:Generator_RowEvArgName="test_bookingRowChangeEvent" msprop:Generator_TablePropName="test_booking" msprop:Generator_RowChangedName="test_bookingRowChanged" msprop:Generator_RowChangingName="test_bookingRowChanging" msprop:Generator_TableClassName="test_bookingDataTable" msprop:Generator_RowClassName="test_bookingRow" msprop:Generator_TableVarName="tabletest_booking" msprop:Generator_UserTableName="test_booking">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="book_id" msprop:Generator_ColumnPropNameInRow="book_id" msprop:Generator_ColumnPropNameInTable="book_idColumn" msprop:Generator_ColumnVarNameInTable="columnbook_id" msprop:Generator_UserColumnName="book_id" type="xs:decimal" />
+              <xs:element name="patient_id" msprop:Generator_ColumnPropNameInRow="patient_id" msprop:Generator_ColumnPropNameInTable="patient_idColumn" msprop:Generator_ColumnVarNameInTable="columnpatient_id" msprop:Generator_UserColumnName="patient_id" type="xs:decimal" />
+              <xs:element name="test_id" msprop:Generator_ColumnPropNameInRow="test_id" msprop:Generator_ColumnPropNameInTable="test_idColumn" msprop:Generator_ColumnVarNameInTable="columntest_id" msprop:Generator_UserColumnName="test_id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sch_time" msprop:Generator_ColumnPropNameInRow="sch_time" msprop:Generator_ColumnPropNameInTable="sch_timeColumn" msprop:Generator_ColumnVarNameInTable="columnsch_time" msprop:Generator_UserColumnName="sch_time">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="paid" msprop:Generator_ColumnPropNameInRow="paid" msprop:Generator_ColumnPropNameInTable="paidColumn" msprop:Generator_ColumnVarNameInTable="columnpaid" msprop:Generator_UserColumnName="paid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Due" msprop:Generator_ColumnPropNameInRow="Due" msprop:Generator_ColumnPropNameInTable="DueColumn" msprop:Generator_ColumnVarNameInTable="columnDue" msprop:Generator_UserColumnName="Due" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

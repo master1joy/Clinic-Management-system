@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Dataset3" targetNamespace="http://tempuri.org/Dataset3.xsd" xmlns:mstns="http://tempuri.org/Dataset3.xsd" xmlns="http://tempuri.org/Dataset3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ClinicManagementConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ClinicManagementConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ClinicManagementConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Patient_infoTableAdapter" GeneratorDataComponentClassName="Patient_infoTableAdapter" Name="Patient_info" UserDataComponentName="Patient_infoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ClinicManagementConnectionString (Web.config)" DbObjectName="ClinicManagement.dbo.Patient_info" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Pat_id, Pat_name, Age, sex FROM dbo.Patient_info</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Pat_id" DataSetColumn="Pat_id" />
+              <Mapping SourceColumn="Pat_name" DataSetColumn="Pat_name" />
+              <Mapping SourceColumn="Age" DataSetColumn="Age" />
+              <Mapping SourceColumn="sex" DataSetColumn="sex" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Dataset3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Dataset3" msprop:Generator_DataSetName="Dataset3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Patient_info" msprop:Generator_RowEvHandlerName="Patient_infoRowChangeEventHandler" msprop:Generator_RowDeletedName="Patient_infoRowDeleted" msprop:Generator_RowDeletingName="Patient_infoRowDeleting" msprop:Generator_RowEvArgName="Patient_infoRowChangeEvent" msprop:Generator_TablePropName="Patient_info" msprop:Generator_RowChangedName="Patient_infoRowChanged" msprop:Generator_RowChangingName="Patient_infoRowChanging" msprop:Generator_TableClassName="Patient_infoDataTable" msprop:Generator_RowClassName="Patient_infoRow" msprop:Generator_TableVarName="tablePatient_info" msprop:Generator_UserTableName="Patient_info">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Pat_id" msprop:Generator_ColumnPropNameInRow="Pat_id" msprop:Generator_ColumnPropNameInTable="Pat_idColumn" msprop:Generator_ColumnVarNameInTable="columnPat_id" msprop:Generator_UserColumnName="Pat_id" type="xs:decimal" />
+              <xs:element name="Pat_name" msprop:Generator_ColumnPropNameInRow="Pat_name" msprop:Generator_ColumnPropNameInTable="Pat_nameColumn" msprop:Generator_ColumnVarNameInTable="columnPat_name" msprop:Generator_UserColumnName="Pat_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Age" msprop:Generator_ColumnPropNameInRow="Age" msprop:Generator_ColumnPropNameInTable="AgeColumn" msprop:Generator_ColumnVarNameInTable="columnAge" msprop:Generator_UserColumnName="Age" type="xs:decimal" />
+              <xs:element name="sex" msprop:Generator_ColumnPropNameInRow="sex" msprop:Generator_ColumnPropNameInTable="sexColumn" msprop:Generator_ColumnVarNameInTable="columnsex" msprop:Generator_UserColumnName="sex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

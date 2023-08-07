@@ -1,0 +1,135 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+li a:hover, .dropdown:hover .dropbtn {background-color: rgb(0, 153, 255);}
+a{
+    color:lavender;
+}
+
+li.dropdown {
+        display: inline-block;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+.dropdown-content a:hover {
+            background-color: aquamarine;
+    }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.banner-image {
+    height: 500px;
+    width: 60%;
+    margin:auto;
+}
+
+h1 {
+    font-family: monospace;
+    color: rgb(218, 24, 24);
+    text-align: center;
+    font-style: normal;
+    font-size: 40px;
+    display: inline-block;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.bottom-container {
+    background-color: #66bfbf;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.logo {
+    height: 50px;
+    width: 50px; 
+}
+
+
+.login-button {
+    float: right;
+    text-decoration: solid;
+    padding: 10px 15px;
+    background-color: #333;
+    color: azure;
+    border: none;
+}
+
+    .login-button:hover {
+        background-color: aqua;
+    }
+.text-effect{
+    color:gray;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:100;
+    font-size:medium;
+}
+
+h3{
+    color:darkblue;
+    text-align:center;
+    margin-bottom:0;
+}
+
+.align_item_right{
+    text-align:right;
+}
+
+.customButton {
+    background: #1AAB8A;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+customButton:hover {
+    background: #fff;
+    color: #1AAB8A;
+}
+
+.top-container {
+    height: 100px;
+    background-color: rgb(85, 210, 214);
+}

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ClinicManagementDataSet" targetNamespace="http://tempuri.org/ClinicManagementDataSet.xsd" xmlns:mstns="http://tempuri.org/ClinicManagementDataSet.xsd" xmlns="http://tempuri.org/ClinicManagementDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ClinicManagementConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ClinicManagementConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ClinicManagementConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Doctor_InfoTableAdapter" GeneratorDataComponentClassName="Doctor_InfoTableAdapter" Name="Doctor_Info" UserDataComponentName="Doctor_InfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ClinicManagementConnectionString (Web.config)" DbObjectName="ClinicManagement.dbo.Doctor_Info" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Doc_name, Doc_phone, Qualification, experience, image FROM dbo.Doctor_Info</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Doc_name" DataSetColumn="Doc_name" />
+              <Mapping SourceColumn="Doc_phone" DataSetColumn="Doc_phone" />
+              <Mapping SourceColumn="Qualification" DataSetColumn="Qualification" />
+              <Mapping SourceColumn="experience" DataSetColumn="experience" />
+              <Mapping SourceColumn="image" DataSetColumn="image" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ClinicManagementDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="ClinicManagementDataSet" msprop:Generator_DataSetName="ClinicManagementDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Doctor_Info" msprop:Generator_RowEvHandlerName="Doctor_InfoRowChangeEventHandler" msprop:Generator_RowDeletedName="Doctor_InfoRowDeleted" msprop:Generator_RowDeletingName="Doctor_InfoRowDeleting" msprop:Generator_RowEvArgName="Doctor_InfoRowChangeEvent" msprop:Generator_TablePropName="Doctor_Info" msprop:Generator_RowChangedName="Doctor_InfoRowChanged" msprop:Generator_RowChangingName="Doctor_InfoRowChanging" msprop:Generator_TableClassName="Doctor_InfoDataTable" msprop:Generator_RowClassName="Doctor_InfoRow" msprop:Generator_TableVarName="tableDoctor_Info" msprop:Generator_UserTableName="Doctor_Info">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Doc_name" msprop:Generator_ColumnPropNameInRow="Doc_name" msprop:Generator_ColumnPropNameInTable="Doc_nameColumn" msprop:Generator_ColumnVarNameInTable="columnDoc_name" msprop:Generator_UserColumnName="Doc_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Doc_phone" msprop:Generator_ColumnPropNameInRow="Doc_phone" msprop:Generator_ColumnPropNameInTable="Doc_phoneColumn" msprop:Generator_ColumnVarNameInTable="columnDoc_phone" msprop:Generator_UserColumnName="Doc_phone" type="xs:decimal" />
+              <xs:element name="Qualification" msprop:Generator_ColumnPropNameInRow="Qualification" msprop:Generator_ColumnPropNameInTable="QualificationColumn" msprop:Generator_ColumnVarNameInTable="columnQualification" msprop:Generator_UserColumnName="Qualification">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="experience" msprop:Generator_ColumnPropNameInRow="experience" msprop:Generator_ColumnPropNameInTable="experienceColumn" msprop:Generator_ColumnVarNameInTable="columnexperience" msprop:Generator_UserColumnName="experience" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="image" msprop:Generator_ColumnPropNameInRow="image" msprop:Generator_ColumnPropNameInTable="imageColumn" msprop:Generator_ColumnVarNameInTable="columnimage" msprop:Generator_UserColumnName="image">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

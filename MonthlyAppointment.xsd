@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MonthlyAppointment" targetNamespace="http://tempuri.org/MonthlyAppointment.xsd" xmlns:mstns="http://tempuri.org/MonthlyAppointment.xsd" xmlns="http://tempuri.org/MonthlyAppointment.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ClinicManagementConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ClinicManagementConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ClinicManagementConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="appointment_bookingTableAdapter" GeneratorDataComponentClassName="appointment_bookingTableAdapter" Name="appointment_booking" UserDataComponentName="appointment_bookingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ClinicManagementConnectionString (Web.config)" DbObjectName="ClinicManagement.dbo.appointment_booking" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT App_id, Doc_id, Pat_id, time_slot FROM dbo.appointment_booking</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="App_id" DataSetColumn="App_id" />
+              <Mapping SourceColumn="Doc_id" DataSetColumn="Doc_id" />
+              <Mapping SourceColumn="Pat_id" DataSetColumn="Pat_id" />
+              <Mapping SourceColumn="time_slot" DataSetColumn="time_slot" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MonthlyAppointment" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="MonthlyAppointment" msprop:Generator_DataSetName="MonthlyAppointment">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="appointment_booking" msprop:Generator_RowEvHandlerName="appointment_bookingRowChangeEventHandler" msprop:Generator_RowDeletedName="appointment_bookingRowDeleted" msprop:Generator_RowDeletingName="appointment_bookingRowDeleting" msprop:Generator_RowEvArgName="appointment_bookingRowChangeEvent" msprop:Generator_TablePropName="appointment_booking" msprop:Generator_RowChangedName="appointment_bookingRowChanged" msprop:Generator_RowChangingName="appointment_bookingRowChanging" msprop:Generator_TableClassName="appointment_bookingDataTable" msprop:Generator_RowClassName="appointment_bookingRow" msprop:Generator_TableVarName="tableappointment_booking" msprop:Generator_UserTableName="appointment_booking">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="App_id" msprop:Generator_ColumnPropNameInRow="App_id" msprop:Generator_ColumnPropNameInTable="App_idColumn" msprop:Generator_ColumnVarNameInTable="columnApp_id" msprop:Generator_UserColumnName="App_id" type="xs:decimal" />
+              <xs:element name="Doc_id" msprop:Generator_ColumnPropNameInRow="Doc_id" msprop:Generator_ColumnPropNameInTable="Doc_idColumn" msprop:Generator_ColumnVarNameInTable="columnDoc_id" msprop:Generator_UserColumnName="Doc_id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pat_id" msprop:Generator_ColumnPropNameInRow="Pat_id" msprop:Generator_ColumnPropNameInTable="Pat_idColumn" msprop:Generator_ColumnVarNameInTable="columnPat_id" msprop:Generator_UserColumnName="Pat_id" type="xs:decimal" />
+              <xs:element name="time_slot" msprop:Generator_ColumnPropNameInRow="time_slot" msprop:Generator_ColumnPropNameInTable="time_slotColumn" msprop:Generator_ColumnVarNameInTable="columntime_slot" msprop:Generator_UserColumnName="time_slot">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
